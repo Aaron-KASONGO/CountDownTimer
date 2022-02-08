@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@100&family=Waterfall&display=swap');
+
+.banner-img {
+  background: url(img/Christmas\ Wallpaper\ christmas\ 27669783\ 1024\ 7681jpg.jpg);
+  background-size: cover;
+  height: 100vh;
+  filter:brightness(0.5);
+}
+.navbar-nav > li {
+  margin-left: 10px;
+}
+.img-size {
+  width: 70px;
+  height: 70px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.index-1 {
+  z-index: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.index-2 {
+  z-index: 2;
+}
+
+.aton {
+  font-family: 'Anton', sans-serif;
+}
+
+.montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.waterfall {
+  font-family: 'Waterfall', cursive;
+}
+
+.message {
+  z-index: 3;
+  opacity: 0.3;
+}
+
+.floating {
+  animation: floating 10s ease-in-out 0s infinite;
+}
+
+@keyframes floating {
+  0%{
+      transform: rotate(30deg) translateY(0px);
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  25%{
+      transform: rotate(-30deg) translateY(200px);
   }
-  to {
-    transform: rotate(360deg);
+
+  50%{
+      transform: rotate(30deg) translateY(400px);
+  }
+
+
+  75%{
+      transform: rotate(-30deg)  translateY(600px);
+  }
+
+  100%{
+      transform: translateY(600px);
   }
 }
